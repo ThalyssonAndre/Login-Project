@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --color-light-50: #f8fafc;
+
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-200: #1d1b21;
+    --color-dark-900: #000;
+    
+    --color-green-50: #18DE02;
+    --color-green-100: #76F50B;
+    --color-green-200: #B2DE02;
+
+    --color-gradient: linear-gradient(90deg, var(--color-green-50), var(--color-green-100), var(--color-green-200));
+    --color-gradient-2: linear-gradient(90deg, var(--color-green-50), var(--color-green-100), var(--color-green-200));
+}
+
+* {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    transition: 0.3s ease-in-out;
+
+}
+
+#header_form {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+#header_form h1 {
+    font-size: 40px;
+    position: relative;
+
+}
+
+#header_form h1::before {
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: var(--color-green-50);
+    height: 3px;
+    bottom: 5px;
+    border-radius: 5px;
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s;
+}
+
+#mode_icon:hover {
+    transform: scale(1.2);
+}
+
+#social_media {
+    display: flex;
+    justify-content: space-around;
+}
+
+#social_media img {
+    width: 35px;
+    transition: all .3s;
+}
+
+#social_media img:hover {
+    transform: scale(1.2);
+}
+
+#inputs_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+
+.inputs label {
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-green-50);
+}
+
+.input-logo i {
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+.input-logo input {
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.input-logo input:focus {
+    outline: none;
+}
+
+#forgot a{
+    text-decoration: none;
+    font-size: 12px;
+    transition: all .3s;
+    color: var(--color-dark-50)
+}
+
+#forgot a:hover {
+    color: var(--color-green-50)
+}
+
+#login_button {
+    border: 0;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+    box-shadow: rgb(118, 245, 11, 0.2) 0 15px 30px -5px;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: all .3s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login_button:hover {
+    transform: scale(1.05);
+}
+
+.dark#login_form {
+    transition: 0.3s ease-in-out;
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+}
+
+.dark#login_form .input-logo input,
+.dark#login_form .input-logo i {
+    color: var(--color-light-50)
+}
+
+.dark#login_form #login_button {
+    background: var(--color-dark-100);
+    border: 1.5px solid rgb(118, 245, 11, 0.5);
+    box-shadow: rgb(118, 245, 11, 0.2) 0 15px 30px -5px;
+    transition: all .3s;
+}
+
+.dark#login_form #login_button:hover {
+    background: var(--color-gradient);
+    border: 0;
+}
